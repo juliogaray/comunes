@@ -1,4 +1,4 @@
-﻿![Generalitat Valenciana - CEICE / IES Poeta Paco Mollá (Alicante)](http://julio.iespacomolla.es/Recursos-Comunes/Cabecera_CEICE_IESPPM_Transparente.svg)
+﻿![Generalitat Valenciana - CEICE / IES Poeta Paco Mollá (Alicante)](https://raw.githubusercontent.com/juliogaray/recursos/main/img/Cabecera_CEICE_IESPPM_Transparente.svg)
 # Convertir un servidor Debian en un *router*
 En este tutorial vamos a ver cómo configurar un servidor Debian con dos interfaces de red para que funcione como encaminador.
 
