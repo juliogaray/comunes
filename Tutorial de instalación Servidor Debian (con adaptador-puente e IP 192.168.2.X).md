@@ -69,7 +69,7 @@ Iniciamos la máquina. Lo primero que nos aparece es el menú Grub:
 21. **IMPORTANTE:** a continuación se nos ofrece la opción de seleccionar los paquetes que deseamos instalar.  
 Usa **LA BARRA ESPACIADORA** para **desmarcar TODO excepto los dos últimos:**
 
-![Selección de paquetes](https://raw.githubusercontent.com/juliogaray/comunes/main/imágenes/Seleccionar_paquetes.png)
+![Selección de paquetes](https://raw.githubusercontent.com/juliogaray/comunes/main/img/Seleccionar_paquetes.png)
 
 22. **Pulsa \<INTRO\> para continuar.** A partir de aquí el programa de instalación instalará más de mil paquetes de software. Esto llevará un buen rato, dependiendo de la máquina y del estado de nuestra conexión a Internet (si es que se usa).
 23. Cuando nos pregunte si deseamos instalar el cargador de arranque GRUB en el registro principal de arranque, seleccionaremos «Sí». Y a continuación, cuando nos solicite el dispositivo donde instalarlo, seleccionaremos la segunda opción: «/dev/sda».
@@ -268,7 +268,7 @@ Reinicia la máquina y compruébalo.
 ***tmux*** es una especie de «gestor de ventanas en modo texto». Nos permite configurar un terminal añadiendo pestañas, dividiéndolo en paneles, etc.
 Este es un ejemplo de lo que permite hacer:
 
-![Captura de pantalla de tmux](https://raw.githubusercontent.com/juliogaray/comunes/main/imágenes/tmux.png)
+![Captura de pantalla de tmux](https://raw.githubusercontent.com/juliogaray/comunes/main/img/tmux.png)
 
 Existe una aplicación bastante más avanzada que hace lo mismo, incluso con más y mejores opciones, llamada byobu; pero las últimas versiones no funcionan bien, así que de momento no es recomendable usarla.
 
