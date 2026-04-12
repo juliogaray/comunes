@@ -6,12 +6,11 @@
 ![Imagen alegórica de un servidor Debian](https://raw.githubusercontent.com/juliogaray/comunes/main/img/DebianServer_512.webp)
 
 En este tutorial vamos a ver cómo instalar un servidor Debian en una máquina virtual ejecutándose sobre VirtualBox.
-Vamos a instalar la distro Debian (una de las distribuciones más comunes de GNU/Linux, y una que han usado como base muchas otras, incluyendo Ubuntu y Linux Mint).
-En este ejemplo vamos a usar la versión 12.7. Veamos cómo descargarla:
+Vamos a instalar la distro Debian (una de las distribuciones más comunes de GNU/Linux, y una que han usado como base muchas otras, incluyendo Ubuntu y Linux Mint). Veamos cómo descargarla:
 ## 1 Descargar la ISO
 | En casa | En clase |
 | ------ | ------ |
-| Acudimos a la página de descargas de Debian: https://www.debian.org/distrib/netinst, y nos descargamos la «imagen pequeña», versión [amd64](https://es.wikipedia.org/wiki/X86-64). En el momento de elaborar estos apuntes, era la versión 12.9.0 (archivo imagen debian-12.9.0-amd64-netinst.iso). | Abre tu navegador y abre la dirección siguiente: http://172.30.12.180/?dir=ISOs/Linux. <br/>Descarga a tu ordenador la última versión de Debian disponible, en formato DVD (en la última actualización de estos apuntes, [debian-12.7.0-amd64-DVD-1.iso](http://172.30.12.180/ISOs/Linux/debian-12.7.0-amd64-DVD-1.iso)). |
+| Acudimos a la página de descargas de Debian: https://www.debian.org/distrib/netinst, y nos descargamos la «imagen pequeña», versión [amd64](https://es.wikipedia.org/wiki/X86-64). En el momento de elaborar estos apuntes, era la versión 12.9.0 (archivo imagen debian-12.9.0-amd64-netinst.iso). | Abre tu navegador y abre la dirección siguiente: http://172.30.12.180/?dir=ISOs/Linux. <br/>Descarga a tu ordenador la última versión de Debian disponible, en formato DVD (en la última actualización de estos apuntes, [debian-12.9.0-amd64-DVD-1.iso](http://172.30.12.180/ISOs/Linux/debian-12.9.0-amd64-DVD-1.iso)).
 
 &nbsp;
 
