@@ -264,6 +264,7 @@ sudo shutdown now
 Vamos a instalar algunas aplicaciones que nos pueden facilitar la vida en el uso de la línea de comandos:
 
 - **unzip** (paquete para descomprimir [archivos zip](https://es.wikipedia.org/wiki/Formato_de_compresi%C3%B3n_ZIP))
+- **asciinema** (permite grabar una sesión de línea de comandos, para ver después qué has hecho y cómo)
 - **net-tools** ([herramientas de red](http://www.escomposlinux.org/lfs-es/lfs-es-5.0/appendixa/net-tools.html), útiles para resolución de problemas de conectividad)
 - **locate** ([herramienta de búsqueda](https://www.hostinger.es/tutoriales/como-usar-comando-find-locate-en-linux/) de archivos rápida y cómoda)
 - **tldr** ("too long; didn't read": [herramienta de ayuda más sencilla](https://tldr.sh/) de usar que [man](https://www.man7.org/linux/man-pages/manpipx1/man.1.html))
@@ -271,12 +272,56 @@ Vamos a instalar algunas aplicaciones que nos pueden facilitar la vida en el uso
 - **eg** (herramienta de ayuda de la línea de comandos basada en [ejemplos](https://github.com/srsudar/eg))
 
 ```bash
-sudo apt-get install unzip net-tools locate pipx
+sudo apt-get install unzip asciinema net-tools locate pipx
 pipx install eg tldr
 pipx ensurepath
 ```
 
-### 4.2 Herramientas avanzadas
+### 4.2 Configuración del indicador de sistema o _prompt_ (muy importante; no se corregirán prácticas entregadas sin este paso bien hecho).
+
+Para nuestras prácticas, configuraremos, por seguridad, el _prompt_ de nuestra cuenta con las siguientes instrucciones.  
+Puedes copiarlas directamente en la línea de comandos, pero...  
+**Ejecuta esto con tu usuario normal, no como _root_**_:_
+```bash
+cat << 'EOF' >> ~/.bashrc
+
+# === PROMPT PERSONALIZADO ===
+SESSIE=$(date +%Y%m%d)
+ID=$(echo -n "$(cat /etc/machine-id)$(whoami)$SESSIE" | sha256sum | cut -c1-10)
+
+# ANSI Codes
+CYAAN='\[\e[0;36m\]'
+LICHTCYAAN='\[\e[1;36m\]'
+BLAUW='\[\e[0;34m\]'
+GROEN='\[\e[0;32m\]'
+ROOD='\[\e[0;31m\]'
+RESET='\[\e[0m\]'
+
+KGEBRUIKER=$GROEN
+[ "$(id -u)" -eq 0 ] && KGEBRUIKER=$ROOD
+PS1='['"$KGEBRUIKER\u@\h $CYAAN$SESSIE$LICHTCYAAN"'$(date +%H%M)'"$BLAUW$ID$RESET"'] \w \$ '
+
+EOF
+```
+
+Ahora lo copiamos también en la cuenta de _root:_
+
+```bash
+sudo cp ~/.bashrc /root/.bashrc
+```
+
+Y, a continuación, lo activamos:
+
+```bash
+source ~/.bashrc
+```
+
+Deberías ver un indicador de aspecto parecido a este:
+
+<span style="background-color:black;color:lightgray">&nbsp;[<span style="color:yellowgreen">usuario@maquina</span> <span style="color:cyan">20260411**1440**</span><span style="color:cornflowerblue">c0ee9beaaf</span>] ~ $&nbsp;</span>
+
+
+### 4.3 Herramientas avanzadas
 > **Pregunta a tu profesor si debes instalar las aplicaciones de este punto.**
 
 Instalar estas aplicaciones es optativo. Puedes hacerlo si te apetece, pero no es imprescindible si el profesor no te lo indica:
