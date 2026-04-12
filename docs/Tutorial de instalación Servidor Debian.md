@@ -1,7 +1,7 @@
 ﻿ ﻿![Generalitat Valenciana - CEICE / IES Poeta Paco Mollá (Alicante)](https://raw.githubusercontent.com/juliogaray/recursos/main/img/Cabecera_CEICE_IESPPM_Transparente.svg)
 # Instalación de un Servidor Debian
 
-(v20260128)
+(v20260411)
 
 ![Imagen alegórica de un servidor Debian](https://raw.githubusercontent.com/juliogaray/comunes/main/img/DebianServer_512.webp)
 
