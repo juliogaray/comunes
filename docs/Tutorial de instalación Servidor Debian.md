@@ -285,7 +285,7 @@ Puedes copiarlas directamente en la línea de comandos, pero...
 cat << 'EOF' >> ~/.bashrc
 
 # === PROMPT PERSONALIZADO ===
-SESSIE=$(date +%Y%m%d)
+SESSIE=$(date +%y%m%d)
 ID=$(echo -n "$(cat /etc/machine-id)$(whoami)$SESSIE" | sha256sum | cut -c1-10)
 
 # ANSI Codes
@@ -317,7 +317,7 @@ source ~/.bashrc
 
 Deberías ver un indicador de aspecto parecido a este:
 
-<span style="background-color:black;color:lightgray">&nbsp;[<span style="color:yellowgreen">usuario@maquina</span> <span style="color:cyan">20260411**1440**</span><span style="color:cornflowerblue">c0ee9beaaf</span>] ~ $&nbsp;</span>
+<span style="background-color:black;color:lightgray">&nbsp;[<span style="color:yellowgreen">usuario@maquina</span> <span style="color:cyan">260411**1440**</span><span style="color:cornflowerblue">c0ee9beaaf</span>] ~ $&nbsp;</span>
 
 
 ### 4.3 Herramientas avanzadas
