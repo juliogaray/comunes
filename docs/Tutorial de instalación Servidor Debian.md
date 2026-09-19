@@ -11,7 +11,7 @@ Vamos a instalar la distro Debian (una de las distribuciones más comunes de GNU
 
 | En casa | En clase |
 | ------ | ------ |
-| Acudimos a la página de descargas de Debian: https://www.debian.org/distrib/netinst, y nos descargamos la «imagen pequeña», versión [amd64](https://es.wikipedia.org/wiki/X86-64). En el momento de elaborar estos apuntes, era la versión 12.9.0 (archivo imagen debian-12.9.0-amd64-netinst.iso). | Abre tu navegador y abre la dirección siguiente: http://172.30.12.180/?dir=ISOs/Linux. <br/>Descarga a tu ordenador la última versión de Debian disponible, en formato DVD (en la última actualización de estos apuntes, [debian-12.9.0-amd64-DVD-1.iso](http://172.30.12.180/ISOs/Linux/debian-12.9.0-amd64-DVD-1.iso)).
+| Acudimos a la [página de descargas de Debian](https://www.debian.org/distrib/netinst), y nos descargamos la «imagen pequeña», versión [amd64](https://es.wikipedia.org/wiki/X86-64). En el momento de elaborar estos apuntes, era la versión 12.9.0 (archivo imagen debian-12.9.0-amd64-netinst.iso). | Abre tu navegador y abre la dirección siguiente: [http://172.30.12.180/?dir=ISOs/Linux](http://172.30.12.180/?dir=ISOs/Linux). <br/>Descarga a tu ordenador la última versión de Debian disponible, en formato DVD (en la última actualización de estos apuntes, [debian-13.3.0-amd64-DVD-1.iso](http://172.30.12.180/ISOs/Linux/debian-13.3.0-amd64-DVD-1.iso)).
 
 &nbsp;
 
