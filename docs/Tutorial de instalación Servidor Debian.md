@@ -105,7 +105,7 @@ Iniciamos la máquina. Lo primero que nos aparece es el menú Grub:
 
 20. Después de configurar apt, se nos pregunta si deseamos participar en la encuesta sobre uso de paquetes. Seleccionamos «No» y seguimos adelante.
 21. **IMPORTANTE:** a continuación se nos ofrece la opción de seleccionar los paquetes que deseamos instalar.  
-Usa **LA BARRA ESPACIADORA** para **desmarcar TODO excepto los dos últimos:**
+Usa **LA BARRA ESPACIADORA** para **desmarcar TODO excepto los que se indican en la imagen:**
 
 ![Selección de paquetes](https://raw.githubusercontent.com/juliogaray/comunes/main/img/Seleccionar_paquetes.png)
 
