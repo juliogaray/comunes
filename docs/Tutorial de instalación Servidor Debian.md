@@ -472,7 +472,7 @@ Acceder por SSH a tu máquina virtual en Red NAT no es tan sencillo, porque la m
     - Nombre: «Acceso SSH»
     - Protocolo: ```TCP```.
     - IP anfitrión: es mejor dejarlo vacío (podrías poner la dirección IP de tu máquina anfitriona, o 127.0.0.1, pero eso te obligaría a usar esa misma dirección en el comando ```ssh``` que verás más abajo. Si lo dejas vacío, puedes usar cualquiera de las dos direcciones o el nombre 'localhost').
-    - Puerto anfitrión: escribe la suma de 2000 + ЖЖ (recuerda, el último número de la dirección IP de tu máquina virtual).
+    - Puerto anfitrión: escribe el resultado de sumar 2000 + ЖЖ (recuerda, el último número de la dirección IP de tu máquina virtual).
     - IP invitado: la dirección IP de tu máquina virtual.
     - Puerto invitado: ```22```, el puerto estándar usado por el protocolo SSH.
 6. Haz clic en el botón «Aplicar».
