@@ -107,7 +107,7 @@ Iniciamos la máquina. Lo primero que nos aparece es el menú Grub:
 21. **IMPORTANTE:** a continuación se nos ofrece la opción de seleccionar los paquetes que deseamos instalar.  
 Usa **LA BARRA ESPACIADORA** para **desmarcar TODO excepto los que se indican en la imagen:**
 
-![Selección de paquetes](https://raw.githubusercontent.com/juliogaray/comunes/main/img/Seleccionar_paquetes.png)
+    ![Selección de paquetes](https://raw.githubusercontent.com/juliogaray/comunes/main/img/Seleccionar_paquetes.png)
 
 22. **Pulsa \<INTRO\> para continuar.** A partir de aquí el programa de instalación instalará más de mil paquetes de software. Esto llevará un buen rato, dependiendo de la máquina y del estado de nuestra conexión a Internet (si es que se usa).
 23. Cuando nos pregunte si deseamos instalar el cargador de arranque GRUB en el registro principal de arranque, seleccionaremos «Sí». Y a continuación, cuando nos solicite el dispositivo donde instalarlo, seleccionaremos la segunda opción: «/dev/sda».
@@ -281,10 +281,10 @@ pipx ensurepath
 ### 4.2 Configuración del indicador de sistema o _prompt_ (muy importante; no se corregirán prácticas entregadas sin este paso bien hecho).
 
 Para nuestras prácticas, configuraremos, por seguridad, el _prompt_ de nuestra cuenta con las siguientes instrucciones.  
-Puedes copiarlas directamente en la línea de comandos, pero...  
 **Ejecuta esto con tu usuario normal, no como _root_**_:_
+
+Edita el archivo `~/.bashrc` y añade las siguientes líneas al final:  
 ```bash
-cat << 'EOF' >> ~/.bashrc
 
 # === PROMPT PERSONALIZADO ===
 SESSIE=$(date +%y%m%d)
@@ -301,11 +301,11 @@ RESET='\[\e[0m\]'
 KGEBRUIKER=$GROEN
 [ "$(id -u)" -eq 0 ] && KGEBRUIKER=$ROOD
 PS1='['"$KGEBRUIKER\u@\h $CYAAN$SESSIE$LICHTCYAAN"'$(date +%H%M)'"$BLAUW$ID$RESET"'] \w \$ '
-
-EOF
 ```
 
-Ahora lo copiamos también en la cuenta de _root:_
+Guarda el archivo y sal del editor. 
+
+Seguidamente lo copiamos también en la cuenta de _root:_
 
 ```bash
 sudo cp ~/.bashrc /root/.bashrc
@@ -382,18 +382,19 @@ sudo shutdown now
 
 1. Edita el archivo de configuración de GRUB:
 
-```bash
-sudo nano /etc/default/grub
-```
+    ```bash
+    sudo nano /etc/default/grub
+    ```
 
 2. En este archivo, usa la combinación ```<Ctrl>-W``` para buscar las letras «GFX». Cuando las encuentres, asegúrate de que la línea que las contiene está comentada (debe comenzar por el carácter ```#```); si no es así, pon tú el carácter mencionado al principio de la línea.
 
 3. Añade debajo la siguiente línea:
 
-```bash
-GRUB_CMDLINE_LINUX="video=1024x768"
-```
-Guarda el archivo y sal del editor. Acabamos de cambiar la configuración de GRUB, de manera que añada a todas las entradas del menú de arranque el parámetro "video=1024x768", que serña tomado en cuenta por el kernel durante el arranque para establecer el tamaño de la pantalla. Puedes usar otros tamaños estándar de admitidos por la tarjeta gráfica, como ```640x480```, ```800x600``` o ```1280x720```, entre otros. Probablemente ```1024x768``` sea el más cómodo.
+    ```bash
+    GRUB_CMDLINE_LINUX="video=1024x768"
+    ```
+
+    Guarda el archivo y sal del editor. Acabamos de cambiar la configuración de GRUB, de manera que añada a todas las entradas del menú de arranque el parámetro "video=1024x768", que serña tomado en cuenta por el kernel durante el arranque para establecer el tamaño de la pantalla. Puedes usar otros tamaños estándar de admitidos por la tarjeta gráfica, como ```640x480```, ```800x600``` o ```1280x720```, entre otros. Probablemente ```1024x768``` sea el más cómodo.
 
 4. Actualiza la configuración efectiva de Grub:
 
