@@ -284,6 +284,7 @@ Para nuestras prácticas, configuraremos, por seguridad, el _prompt_ de nuestra 
 **Ejecuta esto con tu usuario normal, no como _root_**_:_
 
 Edita el archivo `~/.bashrc` y añade las siguientes líneas al final:  
+
 ```bash
 
 # === PROMPT PERSONALIZADO ===
