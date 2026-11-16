@@ -292,16 +292,16 @@ SESSIE=$(date +%y%m%d)
 ID=$(echo -n "$(cat /etc/machine-id)$(whoami)$SESSIE" | sha256sum | cut -c1-10)
 
 # ANSI Codes
-CYAAN='\[\e[0;36m\]'
-LICHTCYAAN='\[\e[1;36m\]'
-BLAUW='\[\e[0;34m\]'
-GROEN='\[\e[0;32m\]'
-ROOD='\[\e[0;31m\]'
-RESET='\[\e[0m\]'
+KC='\[\e[0;36m\]'		# CYAAN
+KLC='\[\e[1;36m\]'		# LICHTCYAAN
+KB='\[\e[0;34m\]'		# BLAUW
+KG='\[\e[0;32m\]'		# GROEN
+KR='\[\e[0;31m\]'		# ROOD
+KRESET='\[\e[0m\]'
 
-KLGB=$GROEN
-[ "$(id -u)" -eq 0 ] && KLGB=$ROOD
-PS1='['"$KLGB\u@\h $CYAAN$SESSIE$LICHTCYAAN"'$(date +%H%M)'"$BLAUW$ID$RESET"'] \w \$ '
+KLGB=$KG
+[ "$(id -u)" -eq 0 ] && KLGB=$KR
+PS1='['"$KLGB\u@\h $KC$SESSIE$KLC"'$(date +%H%M)'"$KB$ID$KRESET"'] \w \$ '
 ```
 
 Guarda el archivo y sal del editor. 
