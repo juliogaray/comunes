@@ -299,9 +299,9 @@ GROEN='\[\e[0;32m\]'
 ROOD='\[\e[0;31m\]'
 RESET='\[\e[0m\]'
 
-KGEBRUIKER=$GROEN
-[ "$(id -u)" -eq 0 ] && KGEBRUIKER=$ROOD
-PS1='['"$KGEBRUIKER\u@\h $CYAAN$SESSIE$LICHTCYAAN"'$(date +%H%M)'"$BLAUW$ID$RESET"'] \w \$ '
+KLGB=$GROEN
+[ "$(id -u)" -eq 0 ] && KLGB=$ROOD
+PS1='['"$KLGB\u@\h $CYAAN$SESSIE$LICHTCYAAN"'$(date +%H%M)'"$BLAUW$ID$RESET"'] \w \$ '
 ```
 
 Guarda el archivo y sal del editor. 
